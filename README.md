@@ -12,3 +12,6 @@ File branched via "git checkout -b 'str'"
 
 # Branch 2
 Branch 2
+
+# Merge
+Will merge via "git checkout branch_1 ; git merge branch_2" 
