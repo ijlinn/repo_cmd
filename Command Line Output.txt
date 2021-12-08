@@ -1,0 +1,167 @@
+Microsoft Windows [Version 10.0.18363.1916]
+(c) 2019 Microsoft Corporation. All rights reserved.
+
+C:\Users\ijlinn01>git clone https://github.com/ijlinn/repo_cmd.git
+Cloning into 'repo_cmd'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+
+C:\Users\ijlinn01>cd repo_cmd
+
+C:\Users\ijlinn01\repo_cmd>git add README.md
+
+C:\Users\ijlinn01\repo_cmd>git commit -m "added clone"
+[main 34d5f3d] added clone
+ 1 file changed, 3 insertions(+)
+
+C:\Users\ijlinn01\repo_cmd>git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 304 bytes | 304.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/ijlinn/repo_cmd.git
+   7300b53..34d5f3d  main -> main
+
+C:\Users\ijlinn01\repo_cmd>git add README.md
+
+C:\Users\ijlinn01\repo_cmd>git commit -m "added commit"
+[main 3ef9672] added commit
+ 1 file changed, 3 insertions(+)
+
+C:\Users\ijlinn01\repo_cmd>git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 356 bytes | 356.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/ijlinn/repo_cmd.git
+   34d5f3d..3ef9672  main -> main
+
+C:\Users\ijlinn01\repo_cmd>git checkout -b branch_1
+Switched to a new branch 'branch_1'
+
+C:\Users\ijlinn01\repo_cmd>git add README.md
+
+C:\Users\ijlinn01\repo_cmd>git commit -m "added branch"
+[branch_1 51591c7] added branch
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+C:\Users\ijlinn01\repo_cmd>git push
+fatal: The current branch branch_1 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin branch_1
+
+
+C:\Users\ijlinn01\repo_cmd>git push --set-upstream origin branch_1
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 319 bytes | 319.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'branch_1' on GitHub by visiting:
+remote:      https://github.com/ijlinn/repo_cmd/pull/new/branch_1
+remote:
+To https://github.com/ijlinn/repo_cmd.git
+ * [new branch]      branch_1 -> branch_1
+Branch 'branch_1' set up to track remote branch 'branch_1' from 'origin'.
+
+C:\Users\ijlinn01\repo_cmd>git checkout -b branch_2
+Switched to a new branch 'branch_2'
+
+C:\Users\ijlinn01\repo_cmd>git add README.md
+
+C:\Users\ijlinn01\repo_cmd>git commit "branch 2"
+error: pathspec 'branch 2' did not match any file(s) known to git
+
+C:\Users\ijlinn01\repo_cmd>git commit -m "branch 2"
+[branch_2 5697313] branch 2
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+C:\Users\ijlinn01\repo_cmd>git push --set-upstream origin branch_2
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 286 bytes | 286.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'branch_2' on GitHub by visiting:
+remote:      https://github.com/ijlinn/repo_cmd/pull/new/branch_2
+remote:
+To https://github.com/ijlinn/repo_cmd.git
+ * [new branch]      branch_2 -> branch_2
+Branch 'branch_2' set up to track remote branch 'branch_2' from 'origin'.
+
+C:\Users\ijlinn01\repo_cmd>git branch
+  branch_1
+* branch_2
+  main
+
+C:\Users\ijlinn01\repo_cmd>git add .
+
+C:\Users\ijlinn01\repo_cmd>git commit -m "added merge"
+[branch_2 cc79499] added merge
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+C:\Users\ijlinn01\repo_cmd>git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 328 bytes | 328.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/ijlinn/repo_cmd.git
+   5697313..cc79499  branch_2 -> branch_2
+
+C:\Users\ijlinn01\repo_cmd>git checkout branch_1
+Switched to branch 'branch_1'
+Your branch is up to date with 'origin/branch_1'.
+
+C:\Users\ijlinn01\repo_cmd>git merge branch_2
+Updating 51591c7..cc79499
+Fast-forward
+ README.md | 8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+
+C:\Users\ijlinn01\repo_cmd>git push origin --delete branch_2
+To https://github.com/ijlinn/repo_cmd.git
+ - [deleted]         branch_2
+
+C:\Users\ijlinn01\repo_cmd>git add .
+
+C:\Users\ijlinn01\repo_cmd>git commit -m "added deletion and edited branch"
+On branch branch_1
+Your branch is ahead of 'origin/branch_1' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+C:\Users\ijlinn01\repo_cmd>git add .
+
+C:\Users\ijlinn01\repo_cmd>git commit -m "added deletion and edited branch"
+[branch_1 17a08ab] added deletion and edited branch
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+
+C:\Users\ijlinn01\repo_cmd>git push
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (9/9), 924 bytes | 924.00 KiB/s, done.
+Total 9 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), done.
+To https://github.com/ijlinn/repo_cmd.git
+   51591c7..17a08ab  branch_1 -> branch_1
+
+C:\Users\ijlinn01\repo_cmd>
