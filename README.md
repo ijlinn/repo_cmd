@@ -9,3 +9,6 @@ File edited via "git add README.md ; git commit -m 'str' ; git push "
 
 # Branched
 File branched via "git checkout -b 'str'"
+
+# Branch 2
+Branch 2
