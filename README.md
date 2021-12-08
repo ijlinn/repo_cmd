@@ -17,4 +17,6 @@ Branch 2
 Will merge via "git checkout branch_1 ; git merge branch_2" 
 
 # Deletion
-Will delete updated branch_2 via "git push origin --delete branch_2"
+remote Will delete updated branch_2 via "git push origin --delete branch_2"
+
+local will delete via "git branch -d branch_2"
